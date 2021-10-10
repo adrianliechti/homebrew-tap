@@ -5,28 +5,28 @@
 class Loop < Formula
   desc ""
   homepage ""
-  version "0.4.0"
+  version "0.5.0"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.4.0/loop_0.4.0_darwin_amd64.tar.gz"
-      sha256 "8a5b5506c6421925c5ab31f918dbe6e34f47fd12e147ac5b34202140323952a2"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.4.0/loop_0.4.0_darwin_arm64.tar.gz"
-      sha256 "e7f2fd3a0d87258c6846f2a9ab72fc122a8f33f09321487f10aff605ae4edb55"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.5.0/loop_0.5.0_darwin_arm64.tar.gz"
+      sha256 "09760a776c5424e98a0fe00171c526a33896416363097d05e908a87b2fa03395"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/adrianliechti/loop/releases/download/v0.5.0/loop_0.5.0_darwin_amd64.tar.gz"
+      sha256 "adea65fe199624f3b8d885b96e52f580777aa6118c56624d095930fec3535ee7"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.4.0/loop_0.4.0_linux_arm64.tar.gz"
-      sha256 "af4400f035872b7d6d92cd1f6f1f633aa319a428862c2620a49db7a6765d5780"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.5.0/loop_0.5.0_linux_arm64.tar.gz"
+      sha256 "1e593272b4701fabec8d74d2d44a1748e6c493de8de723dad8c9a265d7cddc3a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.4.0/loop_0.4.0_linux_amd64.tar.gz"
-      sha256 "d0f6d3e6683fe048465b1eaa3c0bf4037c762c22e350fc96fb981a5e88cbb7de"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.5.0/loop_0.5.0_linux_amd64.tar.gz"
+      sha256 "2254bd8a3bd452b6cb57d7d25fbe2cf900980e6518545f1af58c0805fc2b2111"
     end
   end
 
