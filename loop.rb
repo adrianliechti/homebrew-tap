@@ -6,7 +6,6 @@ class Loop < Formula
   desc ""
   homepage ""
   version "0.8.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
