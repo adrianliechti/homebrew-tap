@@ -5,20 +5,20 @@
 class Loop < Formula
   desc ""
   homepage ""
-  version "0.8.1"
+  version "0.8.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.8.1/loop_0.8.1_darwin_arm64.tar.gz"
-      sha256 "264b3a249c638e8cda07dbe7a14e38be309b0ea28339b7d3e6ec49c25ad86ee1"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.8.2/loop_0.8.2_darwin_arm64.tar.gz"
+      sha256 "8d93acc93f0a8b09f1454fdcccba00b5cdb5a670c88e3173d7d019eed5722042"
 
       def install
         bin.install "loop"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.8.1/loop_0.8.1_darwin_amd64.tar.gz"
-      sha256 "21a2606716d7e7f103f825283c790345f33b7bc4b7af4e5059a1b0465846c165"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.8.2/loop_0.8.2_darwin_amd64.tar.gz"
+      sha256 "ef57e018326c28505ca3fc8a1883732a19ac571d316984b479fce5b11b9b1897"
 
       def install
         bin.install "loop"
@@ -28,16 +28,16 @@ class Loop < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.8.1/loop_0.8.1_linux_arm64.tar.gz"
-      sha256 "9ff10bf36f3a45838e61122d6d24963577ec1c847c1bdc348f98947baa202127"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.8.2/loop_0.8.2_linux_arm64.tar.gz"
+      sha256 "dc3b6ad749147981c945b22faeae292c0bdbf27865726ba77d5bf84ea304e3f0"
 
       def install
         bin.install "loop"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.8.1/loop_0.8.1_linux_amd64.tar.gz"
-      sha256 "5cb6142950b4e7721274fc7a7cf4fa19d399aa3bd51fff77a96bcf15db1c8e12"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.8.2/loop_0.8.2_linux_amd64.tar.gz"
+      sha256 "164edd1a27b1a4ed6fd516da32572eff2d7b98e1d415386c619debd7771f795b"
 
       def install
         bin.install "loop"
