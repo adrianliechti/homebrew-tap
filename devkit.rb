@@ -10,7 +10,7 @@ class Devkit < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/adrianliechti/devkit/releases/download/v0.0.6/devkit_0.0.6_darwin_arm64.tar.gz"
-      sha256 "35b0ddcc8d760e9867a9fb3034bd710842da058add2612f37e9dbe689b2f23c2"
+      sha256 "2b1dafdd17e61f7ccf378796d49924d8d422dab75d29413ee570e0af144f85d5"
 
       def install
         bin.install "devkit"
@@ -18,7 +18,7 @@ class Devkit < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/adrianliechti/devkit/releases/download/v0.0.6/devkit_0.0.6_darwin_amd64.tar.gz"
-      sha256 "d5525f7f3de0d304650041cd75638f91f57f875e338c725576c8cc2820c8054a"
+      sha256 "3f64572d7a1019ac8dcdf3e3b9870234db24940caf7ea69379f456d6fca92045"
 
       def install
         bin.install "devkit"
@@ -29,7 +29,7 @@ class Devkit < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/adrianliechti/devkit/releases/download/v0.0.6/devkit_0.0.6_linux_arm64.tar.gz"
-      sha256 "f6a464e9cf782e3ec7efdc96aeb53237ff860e1fc0cde64c0e3fee221ba8adac"
+      sha256 "d58ac05405c6e1376fcd89ee5a47594d2930db38d44a8596b1e43cc5bf30ceb4"
 
       def install
         bin.install "devkit"
@@ -37,7 +37,7 @@ class Devkit < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/adrianliechti/devkit/releases/download/v0.0.6/devkit_0.0.6_linux_amd64.tar.gz"
-      sha256 "65fe3505aa0658dee45337cfdfb6375b251724c81fa497d34981ca58750f759b"
+      sha256 "a2f01d2fd1f6d60ea679522d50da1fab08a68987b307b95e3f9def950a7a1b7b"
 
       def install
         bin.install "devkit"
