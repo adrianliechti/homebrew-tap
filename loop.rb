@@ -5,20 +5,20 @@
 class Loop < Formula
   desc ""
   homepage ""
-  version "0.11.0"
+  version "0.11.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.11.0/loop_0.11.0_darwin_arm64.tar.gz"
-      sha256 "857143528c935740b330f94b195c0e92f4934a252a913cdb9646c1f5d8682aec"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.11.1/loop_0.11.1_darwin_arm64.tar.gz"
+      sha256 "a5167585602f64a52f1f775c6b58db55b983029d1674fb8510400b94ac7488a5"
 
       def install
         bin.install "loop"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.11.0/loop_0.11.0_darwin_amd64.tar.gz"
-      sha256 "677a74bd4777b7113fdacc59b8e7f89305c2f4115ff2f40b647730bbb06205d0"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.11.1/loop_0.11.1_darwin_amd64.tar.gz"
+      sha256 "36ef277748def04f4405e503cfcb76ffd2c7d5d557757a43b884796ae3c0e7ff"
 
       def install
         bin.install "loop"
@@ -28,16 +28,16 @@ class Loop < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.11.0/loop_0.11.0_linux_arm64.tar.gz"
-      sha256 "933bd0f95fa210526cfd41bcf3a4039c72f031d21c05d5751818ae97c0a6ffd7"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.11.1/loop_0.11.1_linux_arm64.tar.gz"
+      sha256 "84010844cc687a9c87affafff1ff87c1e329894291ef7bdf65f7c8b258587930"
 
       def install
         bin.install "loop"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.11.0/loop_0.11.0_linux_amd64.tar.gz"
-      sha256 "0c289bf9b31180d1057b1d76e3f1b992e194801c354157edb10a25119fd300c5"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.11.1/loop_0.11.1_linux_amd64.tar.gz"
+      sha256 "9df9266530cd385d149508587b5f72866d6c7f6e225b5a65e3b299a0bb8812ba"
 
       def install
         bin.install "loop"
