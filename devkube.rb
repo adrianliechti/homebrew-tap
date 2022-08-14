@@ -10,7 +10,7 @@ class Devkube < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/adrianliechti/devkube/releases/download/v0.0.6/devkube_0.0.6_darwin_arm64.tar.gz"
-      sha256 "5fbce663bd04bbb4b5afb6afddd9a414512200d79d4a5c162b8e347aa6ce3d44"
+      sha256 "ac96a76db1355dcb2e34a3cb1507363c8fba365070ba36eeecee6d92b2ab0eec"
 
       def install
         bin.install "devkube"
@@ -18,7 +18,7 @@ class Devkube < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/adrianliechti/devkube/releases/download/v0.0.6/devkube_0.0.6_darwin_amd64.tar.gz"
-      sha256 "d025d7440358fd4f3b9e997cd4d73c6e7449c9081279fedba480275601be56aa"
+      sha256 "59fed494ade4ccc6ab83e7c0a2ad0ed3861fe673c7729c6aa88ed839396b6ff3"
 
       def install
         bin.install "devkube"
@@ -29,7 +29,7 @@ class Devkube < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/adrianliechti/devkube/releases/download/v0.0.6/devkube_0.0.6_linux_arm64.tar.gz"
-      sha256 "49e8c5ef2da09e910a943801ab1ca9854eb1845038dc10d3bd6c65930a5424a8"
+      sha256 "713d9c54a0f50072789795987a2233327d11e93101767113131dbfab7f4f719a"
 
       def install
         bin.install "devkube"
@@ -37,7 +37,7 @@ class Devkube < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/adrianliechti/devkube/releases/download/v0.0.6/devkube_0.0.6_linux_amd64.tar.gz"
-      sha256 "2d4bc2eabc401da2acffbd5e256581d3fc1bfcd853c61dd35948b57671f8ab8a"
+      sha256 "0fb50b93f99bf6e3360f0691d9192657b6c53efd9ea98442eae852617ea5747b"
 
       def install
         bin.install "devkube"
