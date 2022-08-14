@@ -10,7 +10,7 @@ class Loop < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/adrianliechti/loop/releases/download/v0.12.1/loop_0.12.1_darwin_arm64.tar.gz"
-      sha256 "c929bf704aca251b24f2d2cb67f8b29788765d718653a055056d38831ab8a354"
+      sha256 "9ebfa385fe95024c946b15f402e86bd02ae14cc502f4e451377b3bab454589c4"
 
       def install
         bin.install "loop"
@@ -18,7 +18,7 @@ class Loop < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/adrianliechti/loop/releases/download/v0.12.1/loop_0.12.1_darwin_amd64.tar.gz"
-      sha256 "d86b1c5a5534e0c72569ce970f75e1165d176423664b57d136bf50c527580e9e"
+      sha256 "b77947406c57b40e3a0975c2508530dec27ee0251457fbe413ae20c71fbf69a7"
 
       def install
         bin.install "loop"
@@ -29,7 +29,7 @@ class Loop < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/adrianliechti/loop/releases/download/v0.12.1/loop_0.12.1_linux_arm64.tar.gz"
-      sha256 "448b16bf013d5d58d95584c8b6b3a9addb009c3396eb7132db0bd0d879de78d2"
+      sha256 "d577e62ea5abc9730044840cb442caf545dc339dd854570af0344f7278b590f4"
 
       def install
         bin.install "loop"
@@ -37,7 +37,7 @@ class Loop < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/adrianliechti/loop/releases/download/v0.12.1/loop_0.12.1_linux_amd64.tar.gz"
-      sha256 "bc1f3f992f74fe8cde3f5010054ca6d40ecd4d611eb73d7e0d7589685ed374b7"
+      sha256 "54a0d015e23ab28831a8d42e3933667fd91eef1ca5e20cbd0fa8c5c355ab03bd"
 
       def install
         bin.install "loop"
