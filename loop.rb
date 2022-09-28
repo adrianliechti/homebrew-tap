@@ -5,20 +5,23 @@
 class Loop < Formula
   desc ""
   homepage ""
-  version "0.12.1"
+  version "0.14.0"
+
+  depends_on "kubernetes-cli"
+  depends_on "sshuttle"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.12.1/loop_0.12.1_darwin_arm64.tar.gz"
-      sha256 "9ebfa385fe95024c946b15f402e86bd02ae14cc502f4e451377b3bab454589c4"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.14.0/loop_0.14.0_darwin_arm64.tar.gz"
+      sha256 "76af0e4109cef5cdbb1a3179dd051b4b9eb53c6f38ac8aef0510b4f20ef715aa"
 
       def install
         bin.install "loop"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.12.1/loop_0.12.1_darwin_amd64.tar.gz"
-      sha256 "b77947406c57b40e3a0975c2508530dec27ee0251457fbe413ae20c71fbf69a7"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.14.0/loop_0.14.0_darwin_amd64.tar.gz"
+      sha256 "291c0711a60485e63bcb1f9033d52add4b8f93c99f5f8abbccb3adfc43de673f"
 
       def install
         bin.install "loop"
@@ -28,23 +31,20 @@ class Loop < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.12.1/loop_0.12.1_linux_arm64.tar.gz"
-      sha256 "d577e62ea5abc9730044840cb442caf545dc339dd854570af0344f7278b590f4"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.14.0/loop_0.14.0_linux_arm64.tar.gz"
+      sha256 "554c889a3a71961ccaeeda83d9a79f07cab89af47f1ad749332760ea8f38c98d"
 
       def install
         bin.install "loop"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.12.1/loop_0.12.1_linux_amd64.tar.gz"
-      sha256 "54a0d015e23ab28831a8d42e3933667fd91eef1ca5e20cbd0fa8c5c355ab03bd"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.14.0/loop_0.14.0_linux_amd64.tar.gz"
+      sha256 "1c114a682980089e6af138db852385a6cf2a02cb142a11319e4c6446d18d6a3f"
 
       def install
         bin.install "loop"
       end
     end
   end
-
-  depends_on "kubernetes-cli"
-  depends_on "sshuttle"
 end
