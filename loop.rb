@@ -5,22 +5,22 @@
 class Loop < Formula
   desc ""
   homepage ""
-  version "0.15.0"
+  version "0.15.1"
 
   depends_on "kubernetes-cli"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.15.0/loop_0.15.0_darwin_arm64.tar.gz"
-      sha256 "512cc3317b38414c8b8d262ac3524d5fbe5e59bb7c54038d8a4897947c914c91"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.15.1/loop_0.15.1_darwin_arm64.tar.gz"
+      sha256 "ea571b7938d494de353b04c9b046a2653d00ad5599baddfc96b4001c93178064"
 
       def install
         bin.install "loop"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.15.0/loop_0.15.0_darwin_amd64.tar.gz"
-      sha256 "5fa4e21e04b10616851b83159a1e2d4acb21c1b56a4e1856f8cf3757ebdae57b"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.15.1/loop_0.15.1_darwin_amd64.tar.gz"
+      sha256 "bb69f0c06df2d55de7bb1b4685546b3d43a59b35675c6830e949e40d97b5c64a"
 
       def install
         bin.install "loop"
@@ -30,16 +30,16 @@ class Loop < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.15.0/loop_0.15.0_linux_arm64.tar.gz"
-      sha256 "248af3fac528546130597fbc0d4e699af0c8b79c42846d3a0e2510bba4953fbe"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.15.1/loop_0.15.1_linux_arm64.tar.gz"
+      sha256 "ed5c94fb5a8fe6e5432bafd1f63307b21b8ff4756230ef75d49007d33c8397d2"
 
       def install
         bin.install "loop"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.15.0/loop_0.15.0_linux_amd64.tar.gz"
-      sha256 "6eb85a87eb401d05e8864ca9e7bf0699e87f79abf63b9f86a85f909f285bdf0b"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.15.1/loop_0.15.1_linux_amd64.tar.gz"
+      sha256 "927c3bf50fe3b87d23fa435b8a4c6567fa12fd4686f7f26425f0dfb56ca2b1de"
 
       def install
         bin.install "loop"
