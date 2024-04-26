@@ -8,7 +8,7 @@ class LlamaCpp < Formula
 
   url "https://github.com/ggerganov/llama.cpp.git",
     tag:      "b2740",
-    revision: "192090bae47960f0d38d4967abe398a5d190057e"
+    revision: "d4a9afc1009f0da88d04b2c5f672d81d5ae94675"
 
   depends_on :macos
 
