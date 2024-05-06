@@ -14,7 +14,7 @@ class LlamaCpp < Formula
   def install
     system "make", "LLAMA_CURL=1", "LLAMA_METAL=1", "LLAMA_METAL_EMBED_LIBRARY=1", "main"
     system "make", "LLAMA_CURL=1", "LLAMA_METAL=1", "LLAMA_METAL_EMBED_LIBRARY=1", "server"
-    bin.install "main" => "llama-cpp"
+    bin.install "main" => "llama-cli"
     bin.install "server" => "llama-server"
   end
 
