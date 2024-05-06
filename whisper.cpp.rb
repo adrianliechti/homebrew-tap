@@ -16,8 +16,6 @@ class WhisperCpp < Formula
     system "make", "WHISPER_METAL=1", "WHISPER_METAL_EMBED_LIBRARY=1"
     bin.install "main" => "whisper-cpp"
     bin.install "server" => "whisper-server"
-    bin.install "ggml-metal.h"
-    bin.install "ggml-metal.metal"
   end
 
   test do
