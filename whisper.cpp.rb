@@ -12,7 +12,8 @@ class WhisperCpp < Formula
   depends_on :macos
 
   def install
-    system "make", "WHISPER_METAL=1", "WHISPER_METAL_EMBED_LIBRARY=1"
+    system "make", "WHISPER_METAL=1", "WHISPER_METAL_EMBED_LIBRARY=1", "main"
+    system "make", "WHISPER_METAL=1", "WHISPER_METAL_EMBED_LIBRARY=1", "server"
     bin.install "main" => "whisper-cpp"
     bin.install "server" => "whisper-server"
   end
