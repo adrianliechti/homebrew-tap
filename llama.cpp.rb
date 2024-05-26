@@ -4,10 +4,10 @@ class LlamaCpp < Formula
   homepage "https://github.com/ggerganov/llama.cpp"
   license "MIT"
 
-  version "b2985"
+  version "b2998"
 
   url "https://github.com/ggerganov/llama.cpp.git",
-    tag:      "b2985"
+    tag:      "b2998"
 
   depends_on :macos
 
