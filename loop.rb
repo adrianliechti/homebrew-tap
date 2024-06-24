@@ -5,22 +5,22 @@
 class Loop < Formula
   desc ""
   homepage ""
-  version "0.15.5"
+  version "0.15.6"
 
   depends_on "kubernetes-cli"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.15.5/loop_0.15.5_darwin_arm64.tar.gz"
-      sha256 "f49796882c8d6a2ce4bac4b39b2bc08c24b0ec53304c84e639ad69136fbec999"
+    on_intel do
+      url "https://github.com/adrianliechti/loop/releases/download/v0.15.6/loop_0.15.6_darwin_amd64.tar.gz"
+      sha256 "8046e68034006a105e3e977ab2c4cece6c4686a1f5184789e4809067643b37d4"
 
       def install
         bin.install "loop"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.15.5/loop_0.15.5_darwin_amd64.tar.gz"
-      sha256 "5e8ee48c00efecffa97e6f14e435e836b65cb070ffa14441bff1cc9f8ef59269"
+    on_arm do
+      url "https://github.com/adrianliechti/loop/releases/download/v0.15.6/loop_0.15.6_darwin_arm64.tar.gz"
+      sha256 "97190da51ba8b83bd7f5de1fe9279542194d056712a10ca77f5a76c28788158e"
 
       def install
         bin.install "loop"
@@ -29,20 +29,24 @@ class Loop < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.15.5/loop_0.15.5_linux_arm64.tar.gz"
-      sha256 "3ed999b74f054ffa610dc6fe803356123a5b23cbc66de54fb4ac850d5dae270a"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/adrianliechti/loop/releases/download/v0.15.6/loop_0.15.6_linux_amd64.tar.gz"
+        sha256 "5d1490dd9eb66c4bdaa9db3b189916af6d20f3bd486be4970ed0416a9dc6f84d"
 
-      def install
-        bin.install "loop"
+        def install
+          bin.install "loop"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.15.5/loop_0.15.5_linux_amd64.tar.gz"
-      sha256 "f243daa670545b7a792dd959b201e42543bb8e08af70acc528993d5492d2adae"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/adrianliechti/loop/releases/download/v0.15.6/loop_0.15.6_linux_arm64.tar.gz"
+        sha256 "4fd1e713ce5ab019762e53b556f71b8ccfc62ad6e589ca7550ac4ccb92f48128"
 
-      def install
-        bin.install "loop"
+        def install
+          bin.install "loop"
+        end
       end
     end
   end
