@@ -5,22 +5,22 @@
 class Loop < Formula
   desc ""
   homepage ""
-  version "0.16.5"
+  version "0.16.6"
 
   depends_on "kubernetes-cli"
 
   on_macos do
     on_intel do
-      url "https://github.com/adrianliechti/loop/releases/download/v0.16.5/loop_0.16.5_darwin_amd64.tar.gz"
-      sha256 "30b22c432f78eb7bab73a1d6140f886007d912e1b4be73a93e6a68fa9f580ac9"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.16.6/loop_0.16.6_darwin_amd64.tar.gz"
+      sha256 "bd55896acb697b1c49a9fcc0a6d6898e507267cb947264b19881ddaf91c19e04"
 
       def install
         bin.install "loop"
       end
     end
     on_arm do
-      url "https://github.com/adrianliechti/loop/releases/download/v0.16.5/loop_0.16.5_darwin_arm64.tar.gz"
-      sha256 "f51f909cdc01e26a55f42428b80576c39f2f29f0281fec18a52a0dffa875e52e"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.16.6/loop_0.16.6_darwin_arm64.tar.gz"
+      sha256 "cb0e3c2eb99ca5d91827d2452a13b71df21bccb4df6a31dd7ee4212a9f68858f"
 
       def install
         bin.install "loop"
@@ -31,8 +31,8 @@ class Loop < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/loop/releases/download/v0.16.5/loop_0.16.5_linux_amd64.tar.gz"
-        sha256 "5fa1f76148f3c94bcc17167f036a16ce02c13612a68f8ef7804696c10ac9bcf8"
+        url "https://github.com/adrianliechti/loop/releases/download/v0.16.6/loop_0.16.6_linux_amd64.tar.gz"
+        sha256 "2cb0f2a455449e29bc8243534594a2676c8a06a9f99f5b37cc04c8db6a33e206"
 
         def install
           bin.install "loop"
@@ -41,8 +41,8 @@ class Loop < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/loop/releases/download/v0.16.5/loop_0.16.5_linux_arm64.tar.gz"
-        sha256 "9189d982c6d7d375d8a4291e05a140aaf2174636076fdd94bb24b47be2e3e00e"
+        url "https://github.com/adrianliechti/loop/releases/download/v0.16.6/loop_0.16.6_linux_arm64.tar.gz"
+        sha256 "f527d6fbb338563e95819ec47845e2b550eedb63704f434cb478bcf0ccede218"
 
         def install
           bin.install "loop"
