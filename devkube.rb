@@ -5,23 +5,20 @@
 class Devkube < Formula
   desc ""
   homepage ""
-  version "0.1.4"
-
-  depends_on "kubernetes-cli"
-  depends_on "helm"
+  version "0.20.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.1.4/devkube_0.1.4_darwin_arm64.tar.gz"
-      sha256 "59c8cb4ab43e28343020b243b63c5a3f338f1ebef0a65f738738273361de0a9a"
+    on_intel do
+      url "https://github.com/adrianliechti/devkube/releases/download/v0.20.0/devkube_0.20.0_darwin_amd64.tar.gz"
+      sha256 "24ed87fed6185b6ef0d9579e5b3f8dcda4352871c6c7daf3dad38be8b36d40b3"
 
       def install
         bin.install "devkube"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.1.4/devkube_0.1.4_darwin_amd64.tar.gz"
-      sha256 "4b37eeb40717e15751655db1f16419783ffead986da9e3d4370b8421569b70de"
+    on_arm do
+      url "https://github.com/adrianliechti/devkube/releases/download/v0.20.0/devkube_0.20.0_darwin_arm64.tar.gz"
+      sha256 "f575a000c2ade6c2ac64cb6b63426631f29f39d1c675cc6b00618d399f71cc3c"
 
       def install
         bin.install "devkube"
@@ -30,20 +27,24 @@ class Devkube < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.1.4/devkube_0.1.4_linux_arm64.tar.gz"
-      sha256 "10e28001051be23a92cd9b77544924087510434551ee0b1ccb7dffa975c59cd8"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/adrianliechti/devkube/releases/download/v0.20.0/devkube_0.20.0_linux_amd64.tar.gz"
+        sha256 "25dbaef5a476961296f593f0668c240d144377e1c50691fda07ee22227e28345"
 
-      def install
-        bin.install "devkube"
+        def install
+          bin.install "devkube"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.1.4/devkube_0.1.4_linux_amd64.tar.gz"
-      sha256 "2473df411d27b3a504aacac0fe3a6f91816e8b0fef795c5ea42d239f1cc7751e"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/adrianliechti/devkube/releases/download/v0.20.0/devkube_0.20.0_linux_arm64.tar.gz"
+        sha256 "eb20414f253dd99b78f6cdcb82ff9f78cd11200b4583533b5f2044ed9cc4a047"
 
-      def install
-        bin.install "devkube"
+        def install
+          bin.install "devkube"
+        end
       end
     end
   end
