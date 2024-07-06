@@ -5,20 +5,20 @@
 class Devkube < Formula
   desc ""
   homepage ""
-  version "0.20.0"
+  version "0.20.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.20.0/devkube_0.20.0_darwin_amd64.tar.gz"
-      sha256 "24ed87fed6185b6ef0d9579e5b3f8dcda4352871c6c7daf3dad38be8b36d40b3"
+      url "https://github.com/adrianliechti/devkube/releases/download/v0.20.1/devkube_0.20.1_darwin_amd64.tar.gz"
+      sha256 "9cc8ec9c0ec461d3305472de324324d563d28e163bc5308294846b4f36ce641c"
 
       def install
         bin.install "devkube"
       end
     end
     on_arm do
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.20.0/devkube_0.20.0_darwin_arm64.tar.gz"
-      sha256 "f575a000c2ade6c2ac64cb6b63426631f29f39d1c675cc6b00618d399f71cc3c"
+      url "https://github.com/adrianliechti/devkube/releases/download/v0.20.1/devkube_0.20.1_darwin_arm64.tar.gz"
+      sha256 "7b784a09adee05919dc672ee94600e8d93e2b360abd0cadb6c757e236a223c08"
 
       def install
         bin.install "devkube"
@@ -29,8 +29,8 @@ class Devkube < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/devkube/releases/download/v0.20.0/devkube_0.20.0_linux_amd64.tar.gz"
-        sha256 "25dbaef5a476961296f593f0668c240d144377e1c50691fda07ee22227e28345"
+        url "https://github.com/adrianliechti/devkube/releases/download/v0.20.1/devkube_0.20.1_linux_amd64.tar.gz"
+        sha256 "a4a848832808c4bedc31de51b397976b78179a4df96d4e484b957a34d8daec2a"
 
         def install
           bin.install "devkube"
@@ -39,8 +39,8 @@ class Devkube < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/devkube/releases/download/v0.20.0/devkube_0.20.0_linux_arm64.tar.gz"
-        sha256 "eb20414f253dd99b78f6cdcb82ff9f78cd11200b4583533b5f2044ed9cc4a047"
+        url "https://github.com/adrianliechti/devkube/releases/download/v0.20.1/devkube_0.20.1_linux_arm64.tar.gz"
+        sha256 "df1130cd51848eb5038c715789e400e73edaf07d2ecd3af51c20a3a040059dd3"
 
         def install
           bin.install "devkube"
