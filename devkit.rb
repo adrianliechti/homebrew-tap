@@ -5,20 +5,20 @@
 class Devkit < Formula
   desc ""
   homepage ""
-  version "0.2.4"
+  version "0.2.5"
 
   on_macos do
     on_intel do
-      url "https://github.com/adrianliechti/devkit/releases/download/v0.2.4/devkit_0.2.4_darwin_amd64.tar.gz"
-      sha256 "ac0b431da05f92bf30448be4beffb79a400690df3fcf05d4e508b3217b03b18a"
+      url "https://github.com/adrianliechti/devkit/releases/download/v0.2.5/devkit_0.2.5_darwin_amd64.tar.gz"
+      sha256 "5cd5e075566df3fb89e8287f475595780b6a60372ccacf27940ef12477459e5c"
 
       def install
         bin.install "devkit"
       end
     end
     on_arm do
-      url "https://github.com/adrianliechti/devkit/releases/download/v0.2.4/devkit_0.2.4_darwin_arm64.tar.gz"
-      sha256 "a313c6cd06e51f365250f14844ad5736d9839baa8853368d986832016f24472f"
+      url "https://github.com/adrianliechti/devkit/releases/download/v0.2.5/devkit_0.2.5_darwin_arm64.tar.gz"
+      sha256 "468dd98969b18733b9b60c396f4c7a6a089bda2ba9246137c13ef315e1c9036b"
 
       def install
         bin.install "devkit"
@@ -29,8 +29,8 @@ class Devkit < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/devkit/releases/download/v0.2.4/devkit_0.2.4_linux_amd64.tar.gz"
-        sha256 "51f9d89cbf814fd99468c31fad5a2bf3de7bf720919dcd1e5fe98d78db0d3902"
+        url "https://github.com/adrianliechti/devkit/releases/download/v0.2.5/devkit_0.2.5_linux_amd64.tar.gz"
+        sha256 "2f35267759275e78105b5530225db9fe553836fa8d0fe5792daf15119c65b4a0"
 
         def install
           bin.install "devkit"
@@ -39,8 +39,8 @@ class Devkit < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/devkit/releases/download/v0.2.4/devkit_0.2.4_linux_arm64.tar.gz"
-        sha256 "46ced2b2bc659498fa5fde853cfe0e1652352ce315c61e6ae32b103e6ec13bde"
+        url "https://github.com/adrianliechti/devkit/releases/download/v0.2.5/devkit_0.2.5_linux_arm64.tar.gz"
+        sha256 "999c65bc18e8c98186efd3988aa8ae8963d2e2d93849609a54199eda8424e378"
 
         def install
           bin.install "devkit"
