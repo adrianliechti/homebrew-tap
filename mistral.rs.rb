@@ -4,10 +4,10 @@ class MistralRs < Formula
   homepage "https://github.com/EricLBuehler/mistral.rs"
   license "MIT"
 
-  version "0.2.5"
+  version "0.3.0"
 
-  url "https://github.com/EricLBuehler/mistral.rs/releases/download/v0.2.5/source.tar.gz"
-  sha256 "c759348b56fc1954ba3151542b162175e8ba50aa9db3d9c0a6b57f58ebb0e364"
+  url "https://github.com/EricLBuehler/mistral.rs/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "e252fc70c3427ff1cc806d6fc189a5e5d2bffdcc3c2c3a4c207df3107714c5e3"
   
   depends_on :macos
   depends_on "rust" => :build
