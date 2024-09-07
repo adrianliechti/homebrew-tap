@@ -6,8 +6,7 @@ class WhisperCpp < Formula
 
   version "v1.6.2"
 
-  url "https://github.com/ggerganov/whisper.cpp.git",
-    tag:      "v1.6.2"
+  url "https://github.com/ggerganov/whisper.cpp.git", tag: "v1.6.2"
   
   depends_on :macos
 
