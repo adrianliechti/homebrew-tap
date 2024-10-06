@@ -4,9 +4,9 @@ class WhisperCpp < Formula
   homepage "https://github.com/ggerganov/whisper.cpp"
   license "MIT"
 
-  version "b1663"
+  version "b1703"
 
-  url "https://github.com/ggerganov/whisper.cpp.git", revision: "2ef717b293fe93872cc3a03ca77942936a281959"
+  url "https://github.com/ggerganov/whisper.cpp.git", revision: "9f346d00840bcd7af62794871109841af40cecfb"
   
   depends_on :macos
 
