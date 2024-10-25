@@ -4,9 +4,9 @@ class SdCpp < Formula
   homepage "https://github.com/leejet/stable-diffusion.cpp"
   license "MIT"
 
-  version "e410aeb"
+  version "ac54e00"
 
-  url "https://github.com/leejet/stable-diffusion.cpp", tag: "master-e410aeb", using: :git
+  url "https://github.com/leejet/stable-diffusion.cpp", tag: "master-ac54e00", using: :git
 
   depends_on :macos
   depends_on "cmake" => :build
