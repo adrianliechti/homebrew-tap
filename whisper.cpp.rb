@@ -4,15 +4,15 @@ class WhisperCpp < Formula
   homepage "https://github.com/ggerganov/whisper.cpp"
   license "MIT"
 
-  version "v1.7.1"
+  version "v1.7.2"
 
-  url "https://github.com/ggerganov/whisper.cpp.git", tag: "v1.7.1"
+  url "https://github.com/ggerganov/whisper.cpp.git", tag: "v1.7.2"
   
   depends_on :macos
 
   def install
-    system "make", "WHISPER_METAL=1", "WHISPER_METAL_EMBED_LIBRARY=1", "main"
-    system "make", "WHISPER_METAL=1", "WHISPER_METAL_EMBED_LIBRARY=1", "server"
+    system "make", "GGML_METAL=1", "GGML_METAL_EMBED_LIBRARY=1", "main"
+    system "make", "GGML_METAL=1", "GGML_METAL_EMBED_LIBRARY=1", "server"
     bin.install "main" => "whisper-cli"
     bin.install "server" => "whisper-server"
   end
