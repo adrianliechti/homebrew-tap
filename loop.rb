@@ -5,20 +5,20 @@
 class Loop < Formula
   desc ""
   homepage ""
-  version "0.17.4"
+  version "0.17.5"
 
   on_macos do
-    on_intel do
-      url "https://github.com/adrianliechti/loop/releases/download/v0.17.4/loop_0.17.4_darwin_amd64.tar.gz"
-      sha256 "0112361f4e94c719f8243dbf0902a1fb5a273b4a23267ae9be9eaaf5f9232de5"
+    if Hardware::CPU.intel?
+      url "https://github.com/adrianliechti/loop/releases/download/v0.17.5/loop_0.17.5_darwin_amd64.tar.gz"
+      sha256 "7db46e6516a9caab6a58d2cf6420e9fcc76c674b3e57fca708e381e06bfa237f"
 
       def install
         bin.install "loop"
       end
     end
-    on_arm do
-      url "https://github.com/adrianliechti/loop/releases/download/v0.17.4/loop_0.17.4_darwin_arm64.tar.gz"
-      sha256 "51db64a6e83d5a97cf6bacdb82cddae40362dd63d1ba63a582ebcc43fd72d724"
+    if Hardware::CPU.arm?
+      url "https://github.com/adrianliechti/loop/releases/download/v0.17.5/loop_0.17.5_darwin_arm64.tar.gz"
+      sha256 "35229dfc7f5e654d184866366845ea25722f06ced219f5321c48513689b77fd8"
 
       def install
         bin.install "loop"
@@ -27,20 +27,20 @@ class Loop < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/loop/releases/download/v0.17.4/loop_0.17.4_linux_amd64.tar.gz"
-        sha256 "f5bd0ef6406d688bf28f0f727f8f72d18f0e375c76102774111d7b7c247f6b01"
+        url "https://github.com/adrianliechti/loop/releases/download/v0.17.5/loop_0.17.5_linux_amd64.tar.gz"
+        sha256 "b198f7886138a47770a47ade9d86ea5396db0f5ee6e625babb872b06175465f9"
 
         def install
           bin.install "loop"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/loop/releases/download/v0.17.4/loop_0.17.4_linux_arm64.tar.gz"
-        sha256 "df6d5daa43321a16f97044ff495075edf4f1c7492cb9ed77586861957c8ea17f"
+        url "https://github.com/adrianliechti/loop/releases/download/v0.17.5/loop_0.17.5_linux_arm64.tar.gz"
+        sha256 "3393b8cf24941829a69071c5a82905fc027aa23fa2abbe516e9a15b821551df4"
 
         def install
           bin.install "loop"
