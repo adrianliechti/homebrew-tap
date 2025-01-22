@@ -5,20 +5,20 @@
 class Wingman < Formula
   desc ""
   homepage ""
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/wingman/releases/download/v0.0.1/wingman_0.0.1_darwin_amd64.tar.gz"
-      sha256 "0f5f94fdf3ca508f2fd9419e23c38e1d3a47642258d92b4c9bc0a7f7e339abc4"
+      url "https://github.com/adrianliechti/wingman/releases/download/v0.0.2/wingman_0.0.2_darwin_amd64.tar.gz"
+      sha256 "859815dd435fa9a3ff13cf6c3f1e98a4540cd22750f1f4125d07d354484da3d1"
 
       def install
         bin.install "wingman"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/wingman/releases/download/v0.0.1/wingman_0.0.1_darwin_arm64.tar.gz"
-      sha256 "b0f50fa712f8d6dcfdd337c40cf58ed786a1b2695a21d64e84860c4e1f8735d8"
+      url "https://github.com/adrianliechti/wingman/releases/download/v0.0.2/wingman_0.0.2_darwin_arm64.tar.gz"
+      sha256 "df5b0d0600720914fa8b99b9b25381ff1a4e05393f4e53cb9830009651d7bfcd"
 
       def install
         bin.install "wingman"
@@ -29,8 +29,8 @@ class Wingman < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/wingman/releases/download/v0.0.1/wingman_0.0.1_linux_amd64.tar.gz"
-        sha256 "72ded74aac9a470940273e2191099f80609222eef5a9e16defac218eb95a5a29"
+        url "https://github.com/adrianliechti/wingman/releases/download/v0.0.2/wingman_0.0.2_linux_amd64.tar.gz"
+        sha256 "83775552b915a44f951eb3a4ccbb3877e30454a3cc2cb44cc58b3d70eac91e58"
 
         def install
           bin.install "wingman"
@@ -39,8 +39,8 @@ class Wingman < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/wingman/releases/download/v0.0.1/wingman_0.0.1_linux_arm64.tar.gz"
-        sha256 "0f329b0282cd3c8cd760f685b297a73adf68b1dbd8d1ef70e4115d45754abd57"
+        url "https://github.com/adrianliechti/wingman/releases/download/v0.0.2/wingman_0.0.2_linux_arm64.tar.gz"
+        sha256 "670d4e5f9854dce042a1e64383bba7bddd312d6204e31943ce3002a08c60100f"
 
         def install
           bin.install "wingman"
