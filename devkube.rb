@@ -5,20 +5,20 @@
 class Devkube < Formula
   desc ""
   homepage ""
-  version "0.23.0"
+  version "0.23.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.23.0/devkube_0.23.0_darwin_amd64.tar.gz"
-      sha256 "ed5962278ea58932a5a391c6e263df97e9cdbaa1a06916379148456d268114bb"
+      url "https://github.com/adrianliechti/devkube/releases/download/v0.23.1/devkube_0.23.1_darwin_amd64.tar.gz"
+      sha256 "337ec9bf5a610c8d8d9615a4fca34d88dd8b131f5c4cbf8bff915f7c345ab540"
 
       def install
         bin.install "devkube"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.23.0/devkube_0.23.0_darwin_arm64.tar.gz"
-      sha256 "c9d4989ff6fc020118654a6c6f6530ac29338ad5acda50eb8a42a3f82f5ea093"
+      url "https://github.com/adrianliechti/devkube/releases/download/v0.23.1/devkube_0.23.1_darwin_arm64.tar.gz"
+      sha256 "28fda8ed489ddd5444bac5e4cecc18461c4addddc0f7943ab207b0516f4ddbc8"
 
       def install
         bin.install "devkube"
@@ -29,8 +29,8 @@ class Devkube < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/devkube/releases/download/v0.23.0/devkube_0.23.0_linux_amd64.tar.gz"
-        sha256 "fc2fd01114bb28231cdf8d74d126601e4ef0f9f67e6e33a0fc7060d94959ebdf"
+        url "https://github.com/adrianliechti/devkube/releases/download/v0.23.1/devkube_0.23.1_linux_amd64.tar.gz"
+        sha256 "9fbd97765ee63fe8448fe2eba0137dcb36bba837177c81449502c51083000780"
 
         def install
           bin.install "devkube"
@@ -39,8 +39,8 @@ class Devkube < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/devkube/releases/download/v0.23.0/devkube_0.23.0_linux_arm64.tar.gz"
-        sha256 "b6522aa00dc3885b2ed319c2c36801355f6f9d7c312739bc9930719e4bf87445"
+        url "https://github.com/adrianliechti/devkube/releases/download/v0.23.1/devkube_0.23.1_linux_arm64.tar.gz"
+        sha256 "798b20582a4567519483ef29ee7560b86426c1bc569605aefc377de1a936ca25"
 
         def install
           bin.install "devkube"
