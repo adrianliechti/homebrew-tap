@@ -5,20 +5,20 @@
 class Devkit < Formula
   desc ""
   homepage ""
-  version "0.2.11"
+  version "0.3.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/adrianliechti/devkit/releases/download/v0.2.11/devkit_0.2.11_darwin_amd64.tar.gz"
-      sha256 "6a87c182899f8402998a74fe0d8ad176b40fe31ca53a8ea13ca5bfb86ebdfe24"
+    if Hardware::CPU.intel?
+      url "https://github.com/adrianliechti/devkit/releases/download/v0.3.0/devkit_0.3.0_darwin_amd64.tar.gz"
+      sha256 "55f2ad7de4b764cfd3faf33318e1382af281617f20fce2bf2a9fedaea4cf30d9"
 
       def install
         bin.install "devkit"
       end
     end
-    on_arm do
-      url "https://github.com/adrianliechti/devkit/releases/download/v0.2.11/devkit_0.2.11_darwin_arm64.tar.gz"
-      sha256 "ed7de5f39b4542f0e405bdecfad6edb70f4973b186a5e9d1f26fe6d728bfebcf"
+    if Hardware::CPU.arm?
+      url "https://github.com/adrianliechti/devkit/releases/download/v0.3.0/devkit_0.3.0_darwin_arm64.tar.gz"
+      sha256 "39d9754d7855fd90c8ce566f5af68f0b2f1e6bfffe00785494e2f5491aa24972"
 
       def install
         bin.install "devkit"
@@ -27,20 +27,20 @@ class Devkit < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/devkit/releases/download/v0.2.11/devkit_0.2.11_linux_amd64.tar.gz"
-        sha256 "8d4cdf2dc96d96675f7ca95c56ea6562a8f396001919b1987f85ca1b2e7c35d4"
+        url "https://github.com/adrianliechti/devkit/releases/download/v0.3.0/devkit_0.3.0_linux_amd64.tar.gz"
+        sha256 "dc6ecd4aff7769d653ca30b2addc7c34b2440d5502c64ab9282028e04d794f8a"
 
         def install
           bin.install "devkit"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/devkit/releases/download/v0.2.11/devkit_0.2.11_linux_arm64.tar.gz"
-        sha256 "d4e34e5168159bc019d5dcb706411200df233aa850ae4003de302e041c98bf99"
+        url "https://github.com/adrianliechti/devkit/releases/download/v0.3.0/devkit_0.3.0_linux_arm64.tar.gz"
+        sha256 "cece71661d3d28d22f4badb634198620b175f8309e0f742914057e2decd9ae87"
 
         def install
           bin.install "devkit"
