@@ -5,20 +5,20 @@
 class WingmanCli < Formula
   desc ""
   homepage ""
-  version "0.0.6"
+  version "0.0.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.0.6/wingman-cli_0.0.6_darwin_amd64.tar.gz"
-      sha256 "efbbcfe3bb839cae7af2a474baee3f4e455c4519bb570da668b347fb0d7b52a0"
+      url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.0.7/wingman-cli_0.0.7_darwin_amd64.tar.gz"
+      sha256 "917b1365ba9f88aca5884b66a0be63972611ade1dcb3fc035beb62cdee5b7aeb"
 
       def install
         bin.install "wingman"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.0.6/wingman-cli_0.0.6_darwin_arm64.tar.gz"
-      sha256 "9aacc4ff4daff7799859f69dfdd09e3980f377a19ec610f5756cbe061e4382cd"
+      url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.0.7/wingman-cli_0.0.7_darwin_arm64.tar.gz"
+      sha256 "ccb1173859248f419fd8ffea8233184ddbd2e548be51c9095df064276851fc15"
 
       def install
         bin.install "wingman"
@@ -29,8 +29,8 @@ class WingmanCli < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.0.6/wingman-cli_0.0.6_linux_amd64.tar.gz"
-        sha256 "7a7f3997da01e9aea2f3241d16e1517b72eb150d731a3fee40876d12994df4f2"
+        url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.0.7/wingman-cli_0.0.7_linux_amd64.tar.gz"
+        sha256 "77f4e88a193769dbebf62b14d9cd9eefb4b3611fe075623345af424f17aacf72"
 
         def install
           bin.install "wingman"
@@ -39,8 +39,8 @@ class WingmanCli < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.0.6/wingman-cli_0.0.6_linux_arm64.tar.gz"
-        sha256 "af71d85960abe67ab3ed74a708e84047cddae9502ebef9e2e8ebbb18646e756a"
+        url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.0.7/wingman-cli_0.0.7_linux_arm64.tar.gz"
+        sha256 "de454c2b0cf42f3867d5b4aa323d2cef67e0429c933b251adb3e5eeee4c80a1c"
 
         def install
           bin.install "wingman"
