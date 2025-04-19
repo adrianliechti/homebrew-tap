@@ -10,7 +10,7 @@ class WingmanCli < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.1.0/wingman-cli_0.1.0_darwin_amd64.tar.gz"
-      sha256 "65adedec1984677a96eccead671a1bfa116a10c66578ff02f2b8970936705f08"
+      sha256 "806418252e1779e16b55b6bde560877fc74a8eafe0bdf80ede55e501863dec87"
 
       def install
         bin.install "wingman"
@@ -18,7 +18,7 @@ class WingmanCli < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.1.0/wingman-cli_0.1.0_darwin_arm64.tar.gz"
-      sha256 "8eb9cb56469edba8ab271144b19b4774151c532b51000d1b386a33897713f103"
+      sha256 "35d010cecd5e6e200290b8b00053ceb5db417e01f4a78d1b7bbfb59b8d8d34a1"
 
       def install
         bin.install "wingman"
@@ -30,7 +30,7 @@ class WingmanCli < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.1.0/wingman-cli_0.1.0_linux_amd64.tar.gz"
-        sha256 "ed3507e4074b841b6f9f65aa45dd1ec13bb9a0da0ef8f12689ed2aea58002fa1"
+        sha256 "1906424b106c4c8d4a56d7d131c7b1ae879495a6deae1b3f64967c819c183e7d"
 
         def install
           bin.install "wingman"
@@ -40,7 +40,7 @@ class WingmanCli < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.1.0/wingman-cli_0.1.0_linux_arm64.tar.gz"
-        sha256 "b46617838a009a3bfa472b3f5431da5a5f4c9784288d5af83b846210828ab4c9"
+        sha256 "5b702f9c5f9886986e4da9958b231e138c3020a974386a29a2e3007e0e271d6f"
 
         def install
           bin.install "wingman"
