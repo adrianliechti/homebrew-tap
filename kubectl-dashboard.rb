@@ -5,20 +5,20 @@
 class KubectlDashboard < Formula
   desc ""
   homepage ""
-  version "0.3.0"
+  version "0.2.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/kubectl-dashboard/releases/download/v0.3.0/kubectl-dashboard_0.3.0_darwin_amd64.tar.gz"
-      sha256 "c4da0206c2d63a3ef49146c9baa7bfc7b283838a75a03145a32c9aabcafd8686"
+      url "https://github.com/adrianliechti/kubectl-dashboard/releases/download/v0.2.1/kubectl-dashboard_0.2.1_darwin_amd64.tar.gz"
+      sha256 "242e6d65fd6a55796a8300c672b619d6d30930416cbe5d2ea322ebcf6c0d353b"
 
       def install
         bin.install "kubectl-dashboard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/kubectl-dashboard/releases/download/v0.3.0/kubectl-dashboard_0.3.0_darwin_arm64.tar.gz"
-      sha256 "e9296c5787208e41b7da8f3db57888284375a751b1753e881b6092c381a432ef"
+      url "https://github.com/adrianliechti/kubectl-dashboard/releases/download/v0.2.1/kubectl-dashboard_0.2.1_darwin_arm64.tar.gz"
+      sha256 "c946539905e8c54617e0769f6ccfa17464a8b3a24d8941d5c9fcc821231cc1c9"
 
       def install
         bin.install "kubectl-dashboard"
@@ -27,24 +27,18 @@ class KubectlDashboard < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/kubectl-dashboard/releases/download/v0.3.0/kubectl-dashboard_0.3.0_linux_amd64.tar.gz"
-        sha256 "38dcee72fcbe553d7f332fd5398512f70229b62a9eb3e0e8ddb2ef0b8130d5d7"
-
-        def install
-          bin.install "kubectl-dashboard"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/adrianliechti/kubectl-dashboard/releases/download/v0.2.1/kubectl-dashboard_0.2.1_linux_amd64.tar.gz"
+      sha256 "e0966a7ed98a90ae86249217eb7d5e914aa7a6fed8354c21ab608b7f2e93c593"
+      def install
+        bin.install "kubectl-dashboard"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/kubectl-dashboard/releases/download/v0.3.0/kubectl-dashboard_0.3.0_linux_arm64.tar.gz"
-        sha256 "2ce1df1cf9909a0ff6ea7311fbaedb6fadb24dee9ac29a1370eb67b7719bbfa9"
-
-        def install
-          bin.install "kubectl-dashboard"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/adrianliechti/kubectl-dashboard/releases/download/v0.2.1/kubectl-dashboard_0.2.1_linux_arm64.tar.gz"
+      sha256 "c528addfdf21be548491a479be3312e079e2a6db984bce4a4be8dd73c34b22a7"
+      def install
+        bin.install "kubectl-dashboard"
       end
     end
   end
