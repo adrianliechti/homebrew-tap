@@ -5,20 +5,20 @@
 class Devkube < Formula
   desc ""
   homepage ""
-  version "0.26.0"
+  version "0.26.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.26.0/devkube_0.26.0_darwin_amd64.tar.gz"
-      sha256 "1fcc2b49313a7ef9ebab2a9c65f7e12c317024e1f6dd636911f6a78d41cdfc84"
+      url "https://github.com/adrianliechti/devkube/releases/download/v0.26.1/devkube_0.26.1_darwin_amd64.tar.gz"
+      sha256 "80f22eca472c27f8644d9761b3ab868377acefe8559748cbbbacf392e38d97d7"
 
       def install
         bin.install "devkube"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.26.0/devkube_0.26.0_darwin_arm64.tar.gz"
-      sha256 "812a18d2f548ce99678dcaa7f0800934f5b45190d548e341f7f2132b13b94322"
+      url "https://github.com/adrianliechti/devkube/releases/download/v0.26.1/devkube_0.26.1_darwin_arm64.tar.gz"
+      sha256 "1e90dc0ad5babb879c4618a35df0f3d3bec0b3f0516cd1084fc50ce27f0ec76f"
 
       def install
         bin.install "devkube"
@@ -28,15 +28,15 @@ class Devkube < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.26.0/devkube_0.26.0_linux_amd64.tar.gz"
-      sha256 "c175041b6e5282ec9a15453848dfbdb2044e2aebaac99c6fc8df041049d0a466"
+      url "https://github.com/adrianliechti/devkube/releases/download/v0.26.1/devkube_0.26.1_linux_amd64.tar.gz"
+      sha256 "5eb613b2557a5b2585517e2b268b8119dfb132be43a037c08a506686b6bd28c3"
       def install
         bin.install "devkube"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.26.0/devkube_0.26.0_linux_arm64.tar.gz"
-      sha256 "1d8e5231458ee3e2251b611d5d9c19d08d9345a0b35a3ad3b05b3cd6e1cdf372"
+      url "https://github.com/adrianliechti/devkube/releases/download/v0.26.1/devkube_0.26.1_linux_arm64.tar.gz"
+      sha256 "7dc1ab394fceea7c6762e40d205e978edc481a3f57231f460f4e95654086c1cb"
       def install
         bin.install "devkube"
       end
