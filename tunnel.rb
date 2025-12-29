@@ -5,20 +5,20 @@
 class Tunnel < Formula
   desc ""
   homepage ""
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/tunnel/releases/download/v0.0.1/tunnel_0.0.1_darwin_amd64.tar.gz"
-      sha256 "a60e90175acc2f645ea7364957cf77ca09068446ca1749a541b861be7fc9a1cf"
+      url "https://github.com/adrianliechti/tunnel/releases/download/v0.0.2/tunnel_0.0.2_darwin_amd64.tar.gz"
+      sha256 "5ce3b003afbb2b42227defc04c47bbfa682994b8876b49e205d045025b292774"
 
       def install
         bin.install "tunnel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/tunnel/releases/download/v0.0.1/tunnel_0.0.1_darwin_arm64.tar.gz"
-      sha256 "2fe8f9cfaaa4d7a76fd23aa450c0ad21278a748709ff36926fcb240a49248591"
+      url "https://github.com/adrianliechti/tunnel/releases/download/v0.0.2/tunnel_0.0.2_darwin_arm64.tar.gz"
+      sha256 "d56f8085aab04e33a9e3bc8cc4409c257fdd1e4cb135b605fed8e8e5f09c5293"
 
       def install
         bin.install "tunnel"
@@ -27,24 +27,18 @@ class Tunnel < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/tunnel/releases/download/v0.0.1/tunnel_0.0.1_linux_amd64.tar.gz"
-        sha256 "a0c3a4d2ea0d5b39accb503d1701504dd4796d6ef74be3a9bc7f809d8bc165b3"
-
-        def install
-          bin.install "tunnel"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/adrianliechti/tunnel/releases/download/v0.0.2/tunnel_0.0.2_linux_amd64.tar.gz"
+      sha256 "8db880016221dcffd9b2ff647b28d46920c41a9a294c4f83ce0d4d099f5d488c"
+      def install
+        bin.install "tunnel"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/adrianliechti/tunnel/releases/download/v0.0.1/tunnel_0.0.1_linux_arm64.tar.gz"
-        sha256 "669004aa19a857bf2a4042e2fffb1a04f28e5eba15099958807b719b537a879b"
-
-        def install
-          bin.install "tunnel"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/adrianliechti/tunnel/releases/download/v0.0.2/tunnel_0.0.2_linux_arm64.tar.gz"
+      sha256 "e1ddbca9e80e20e1e6d3cbb9046aafd2974db27467eefdcec466905120864e2b"
+      def install
+        bin.install "tunnel"
       end
     end
   end
