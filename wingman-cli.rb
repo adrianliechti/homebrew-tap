@@ -5,22 +5,22 @@
 class WingmanCli < Formula
   desc ""
   homepage ""
-  version "0.3.12"
+  version "0.3.13"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.3.12/wingman-cli_0.3.12_darwin_amd64.tar.gz"
-      sha256 "df775d0f4e36bced907a59314ddb50069c110cbcf153d660115313d92f3a1add"
+      url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.3.13/wingman-cli_0.3.13_darwin_amd64.tar.gz"
+      sha256 "326703109e300096053550de772757db857df16ffd527cf341dfa9b507cee28d"
 
-      def install
+      define_method(:install) do
         bin.install "wingman"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.3.12/wingman-cli_0.3.12_darwin_arm64.tar.gz"
-      sha256 "c0c2cd6d5eaedc5b015b3e89872906bd63dabbd246913f930c06ca5746ac8715"
+      url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.3.13/wingman-cli_0.3.13_darwin_arm64.tar.gz"
+      sha256 "768510e9d227b2872355fd5ae48f8bc2ccb550056c7a15a7c2a7e82bde9ee769"
 
-      def install
+      define_method(:install) do
         bin.install "wingman"
       end
     end
@@ -28,16 +28,16 @@ class WingmanCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.3.12/wingman-cli_0.3.12_linux_amd64.tar.gz"
-      sha256 "5f2e1b53a159c7acd8a815be783fec0d23cac9308a9fb207c79d7b287888fade"
-      def install
+      url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.3.13/wingman-cli_0.3.13_linux_amd64.tar.gz"
+      sha256 "9c2c0dea32530c825d58441be722748215392e9a42d463362f3dfa1908ae9b72"
+      define_method(:install) do
         bin.install "wingman"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.3.12/wingman-cli_0.3.12_linux_arm64.tar.gz"
-      sha256 "e62e2597348ccb45e9b87054a06d6e15eaa72c5c4eea450c01ffd18445f10054"
-      def install
+      url "https://github.com/adrianliechti/wingman-cli/releases/download/v0.3.13/wingman-cli_0.3.13_linux_arm64.tar.gz"
+      sha256 "102c456164aaec89e1e712d2a5c9fe146de6a2cb3c4e9bca2fc1e62335d7e243"
+      define_method(:install) do
         bin.install "wingman"
       end
     end
