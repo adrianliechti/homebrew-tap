@@ -5,20 +5,20 @@
 class WingmanAgent < Formula
   desc ""
   homepage ""
-  version "0.5.0"
+  version "0.5.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/wingman-agent/releases/download/v0.5.0/wingman-agent_0.5.0_darwin_amd64.tar.gz"
-      sha256 "a4420aaa1e1749d354f0eb63de533dbdf6426991924ee0350c1dfb6761f74a7b"
+      url "https://github.com/adrianliechti/wingman-agent/releases/download/v0.5.1/wingman-agent_0.5.1_darwin_amd64.tar.gz"
+      sha256 "cd2e6b92995feee6f1903920f2966d5bb8fc50e0e1afe0f7966166d9d20a4294"
 
       define_method(:install) do
         bin.install "wingman"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/wingman-agent/releases/download/v0.5.0/wingman-agent_0.5.0_darwin_arm64.tar.gz"
-      sha256 "1869e2f25bc9331f27005e0be8719a997d8cb385cdfd37c93ea1d8c204a4c016"
+      url "https://github.com/adrianliechti/wingman-agent/releases/download/v0.5.1/wingman-agent_0.5.1_darwin_arm64.tar.gz"
+      sha256 "af5fafb4810ffe2450eba90ae142fa5ec827f0ae5f6e6a4eeef5c0ec70c48fd0"
 
       define_method(:install) do
         bin.install "wingman"
@@ -28,15 +28,15 @@ class WingmanAgent < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/wingman-agent/releases/download/v0.5.0/wingman-agent_0.5.0_linux_amd64.tar.gz"
-      sha256 "2b3924ffc615cccb022e5a5ff22a680d3dbf58fe2957be9f9e7969ed12d6ab37"
+      url "https://github.com/adrianliechti/wingman-agent/releases/download/v0.5.1/wingman-agent_0.5.1_linux_amd64.tar.gz"
+      sha256 "113bbd1d511b9dc7077a79983a9d944b02130f902e3c5a2a786914a2664d36da"
       define_method(:install) do
         bin.install "wingman"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/wingman-agent/releases/download/v0.5.0/wingman-agent_0.5.0_linux_arm64.tar.gz"
-      sha256 "d2c01bdb6c44328e0b02350cbab5d9e289745441f02a3d0bd392ad3f8b89df66"
+      url "https://github.com/adrianliechti/wingman-agent/releases/download/v0.5.1/wingman-agent_0.5.1_linux_arm64.tar.gz"
+      sha256 "9a376ac41d395369628500847d1df91975204f91829c93cf3923050393a28d17"
       define_method(:install) do
         bin.install "wingman"
       end
