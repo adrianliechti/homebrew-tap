@@ -10,7 +10,7 @@ class WingmanAgent < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/adrianliechti/wingman-agent/releases/download/v0.6.6/wingman-agent_0.6.6_darwin_amd64.tar.gz"
-      sha256 "b7d86f4736ea209e44f6b6d981cceab2d5fd75c70113dd806384e7ca4be0b599"
+      sha256 "3a05d254bd883f55945876d43dd793d15c0955495cf1e73f18e81b306aa13b3e"
 
       define_method(:install) do
         bin.install "wingman"
@@ -18,7 +18,7 @@ class WingmanAgent < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/adrianliechti/wingman-agent/releases/download/v0.6.6/wingman-agent_0.6.6_darwin_arm64.tar.gz"
-      sha256 "d527cc18c7620cb64ce495f0e2e43b58e18e318d4cb82dce15a257f37ad4f908"
+      sha256 "de0f7a308cf3f546a1f579780cbb8b02fa2f315688ba8e240213597f0b9f309f"
 
       define_method(:install) do
         bin.install "wingman"
@@ -29,14 +29,14 @@ class WingmanAgent < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/adrianliechti/wingman-agent/releases/download/v0.6.6/wingman-agent_0.6.6_linux_amd64.tar.gz"
-      sha256 "5c0cba372a41ee6b546891f1ae11023835980949d050ebf8d079c754a716c81a"
+      sha256 "0f62669fe213fe879f5b9e252bcfcd942eec41e8de332f8c59610900ffe5a6ac"
       define_method(:install) do
         bin.install "wingman"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/adrianliechti/wingman-agent/releases/download/v0.6.6/wingman-agent_0.6.6_linux_arm64.tar.gz"
-      sha256 "a1888ba481603fccb6b25c4363b6b6eac8488ee400b0897e6e5a9e661b03e010"
+      sha256 "91ceabc7b9c88d4cb084fd218ba57e4ba81df3b759f3ca474184bccd5bef4ee1"
       define_method(:install) do
         bin.install "wingman"
       end
