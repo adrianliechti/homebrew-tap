@@ -1,8 +1,8 @@
 cask "wingman-app" do
-  version "0.8.1"
-  sha256 "6079fb2a7d2b96bd1499daab0e18f0deab2df68dade7cfd8e3c5198bc1d1aa1a"
+  version "0.8.2"
+  sha256 "a5153373e044f33ddb7a2808c6dd5be18312d55346f2892d53728fdb0ea54be4"
 
-  url "https://github.com/adrianliechti/wingman-agent/releases/download/v#{version}/wingman-desktop_#{version}_macOS_arm64.zip"
+  url "https://github.com/adrianliechti/wingman-agent/releases/download/v#{version}/wingman-app_#{version}_macOS_arm64.zip"
   name "Wingman Agent"
   desc "AI-powered coding assistant desktop app"
   homepage "https://github.com/adrianliechti/wingman-agent"
