@@ -1,4 +1,4 @@
-cask "wingman-desktop" do
+cask "wingman-app" do
   version "0.8.1"
   sha256 "6079fb2a7d2b96bd1499daab0e18f0deab2df68dade7cfd8e3c5198bc1d1aa1a"
 
