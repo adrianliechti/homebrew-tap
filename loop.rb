@@ -5,20 +5,20 @@
 class Loop < Formula
   desc ""
   homepage ""
-  version "0.30.0"
+  version "0.30.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.30.0/loop_0.30.0_darwin_amd64.tar.gz"
-      sha256 "c8dedca1027e4fa86187a7c7cc4838da67cff751720f78961a581758642356f5"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.30.1/loop_0.30.1_darwin_amd64.tar.gz"
+      sha256 "bb3104b432d2728bcd19b8f8799505d60a49d508122128e4663d937c7199b4f3"
 
       define_method(:install) do
         bin.install "loop"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.30.0/loop_0.30.0_darwin_arm64.tar.gz"
-      sha256 "7202136d964f395305454488706e8d13a90e18f2caa1ae39d5076d9bd47feaee"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.30.1/loop_0.30.1_darwin_arm64.tar.gz"
+      sha256 "9783612d2f387679fda27a55fbebfb75d2935bf0f49071382f1b3fa1e12ea043"
 
       define_method(:install) do
         bin.install "loop"
@@ -28,15 +28,15 @@ class Loop < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.30.0/loop_0.30.0_linux_amd64.tar.gz"
-      sha256 "b3970458cac5b931eaff60f882e92de74f58bdb4c0fccd725a6c872af009fb4c"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.30.1/loop_0.30.1_linux_amd64.tar.gz"
+      sha256 "98a13a4499f3d599ad5bf0b8173b2e1701797c617b55a6803a757331c22f1159"
       define_method(:install) do
         bin.install "loop"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.30.0/loop_0.30.0_linux_arm64.tar.gz"
-      sha256 "900dcf1d4328ac96e0f7ba0ac8b5e049f5c5bb5a205aefeceb54594630437ab6"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.30.1/loop_0.30.1_linux_arm64.tar.gz"
+      sha256 "20232a970232cfa1814b70b5e89631a5b4378cb6bf22dd412575b451dd7ac1df"
       define_method(:install) do
         bin.install "loop"
       end
