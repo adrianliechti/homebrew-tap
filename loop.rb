@@ -5,22 +5,22 @@
 class Loop < Formula
   desc ""
   homepage ""
-  version "0.20.5"
+  version "0.30.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.20.5/loop_0.20.5_darwin_amd64.tar.gz"
-      sha256 "44dfb39f66d59eb1cd232730bb12df9b6e22e4b3c3f83c146c96fcecdcdf62f3"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.30.0/loop_0.30.0_darwin_amd64.tar.gz"
+      sha256 "c8dedca1027e4fa86187a7c7cc4838da67cff751720f78961a581758642356f5"
 
-      def install
+      define_method(:install) do
         bin.install "loop"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.20.5/loop_0.20.5_darwin_arm64.tar.gz"
-      sha256 "709a27ae982ea90bb63b4c6e29f700462075f09412a47fb5da517da02facebda"
+      url "https://github.com/adrianliechti/loop/releases/download/v0.30.0/loop_0.30.0_darwin_arm64.tar.gz"
+      sha256 "7202136d964f395305454488706e8d13a90e18f2caa1ae39d5076d9bd47feaee"
 
-      def install
+      define_method(:install) do
         bin.install "loop"
       end
     end
@@ -28,16 +28,16 @@ class Loop < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.20.5/loop_0.20.5_linux_amd64.tar.gz"
-      sha256 "d811504938cf82fac5c172d328f192b6f4850d1bc8f71414750abf16b99f03d1"
-      def install
+      url "https://github.com/adrianliechti/loop/releases/download/v0.30.0/loop_0.30.0_linux_amd64.tar.gz"
+      sha256 "b3970458cac5b931eaff60f882e92de74f58bdb4c0fccd725a6c872af009fb4c"
+      define_method(:install) do
         bin.install "loop"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/loop/releases/download/v0.20.5/loop_0.20.5_linux_arm64.tar.gz"
-      sha256 "6c0332aae2362b5921ca8e1d5189154db92a9caa5645365eda5ddd69851dca8e"
-      def install
+      url "https://github.com/adrianliechti/loop/releases/download/v0.30.0/loop_0.30.0_linux_arm64.tar.gz"
+      sha256 "900dcf1d4328ac96e0f7ba0ac8b5e049f5c5bb5a205aefeceb54594630437ab6"
+      define_method(:install) do
         bin.install "loop"
       end
     end
