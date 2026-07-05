@@ -1,6 +1,6 @@
 cask "bridge-app" do
-  version "0.2.0"
-  sha256 "38cc94efaf1f442ebfe51bc3d8890d576625a65d4cfe54a1c84f8b2406e7085d"
+  version "0.2.1"
+  sha256 "e6a6d93a51770d643078fda784b2f3896804a1a59b649c84430bcace3fb74f6b"
 
   url "https://github.com/adrianliechti/bridge/releases/download/v#{version}/bridge-app_#{version}_macOS_arm64.zip"
   name "Bridge"
@@ -23,9 +23,13 @@ cask "bridge-app" do
                    args: ["-dr", "com.apple.quarantine", "#{appdir}/Bridge.app"]
   end
 
-  uninstall quit: "com.wails.Bridge"
+  uninstall quit: ["com.adrianliechti.bridge", "com.wails.Bridge"]
 
   zap trash: [
+    "~/Library/Caches/com.adrianliechti.bridge",
+    "~/Library/HTTPStorages/com.adrianliechti.bridge",
+    "~/Library/Saved Application State/com.adrianliechti.bridge.savedState",
+    "~/Library/WebKit/com.adrianliechti.bridge",
     "~/Library/Caches/com.wails.Bridge",
     "~/Library/HTTPStorages/com.wails.Bridge",
     "~/Library/Saved Application State/com.wails.Bridge.savedState",
