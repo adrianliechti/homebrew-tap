@@ -1,6 +1,6 @@
 cask "granite-app" do
-  version "0.1.0"
-  sha256 "fe275362d1d13cbd4ca8fbbca9dffd226db47d4a85d8da3ee658243548b4a8d1"
+  version "0.1.1"
+  sha256 "12a9473a23ec24933a2646034974715816553debb7aba5748700480cb8782652"
 
   url "https://github.com/adrianliechti/granite/releases/download/v#{version}/granite-app_#{version}_macOS_arm64.zip"
   name "Granite"
@@ -23,9 +23,13 @@ cask "granite-app" do
                    args: ["-dr", "com.apple.quarantine", "#{appdir}/Granite.app"]
   end
 
-  uninstall quit: "com.wails.Granite"
+  uninstall quit: ["com.adrianliechti.granite", "com.wails.Granite"]
 
   zap trash: [
+    "~/Library/Caches/com.adrianliechti.granite",
+    "~/Library/HTTPStorages/com.adrianliechti.granite",
+    "~/Library/Saved Application State/com.adrianliechti.granite.savedState",
+    "~/Library/WebKit/com.adrianliechti.granite",
     "~/Library/Caches/com.wails.Granite",
     "~/Library/HTTPStorages/com.wails.Granite",
     "~/Library/Saved Application State/com.wails.Granite.savedState",
