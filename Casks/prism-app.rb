@@ -1,6 +1,6 @@
 cask "prism-app" do
-  version "0.1.0"
-  sha256 "d492c902ffe918177e26719f25daee80757a7d2cf539320b70b58cc29fee6e9a"
+  version "0.1.1"
+  sha256 "cc4e0e4d4a62bf820fe5d94aab8c8b2b6c2a3cd727861b3a3b92bd189f20a800"
 
   url "https://github.com/adrianliechti/prism/releases/download/v#{version}/prism-app_#{version}_macOS_arm64.zip"
   name "Prism"
@@ -23,9 +23,13 @@ cask "prism-app" do
                    args: ["-dr", "com.apple.quarantine", "#{appdir}/Prism.app"]
   end
 
-  uninstall quit: "com.wails.Prism"
+  uninstall quit: ["com.adrianliechti.prism", "com.wails.Prism"]
 
   zap trash: [
+    "~/Library/Caches/com.adrianliechti.prism",
+    "~/Library/HTTPStorages/com.adrianliechti.prism",
+    "~/Library/Saved Application State/com.adrianliechti.prism.savedState",
+    "~/Library/WebKit/com.adrianliechti.prism",
     "~/Library/Caches/com.wails.Prism",
     "~/Library/HTTPStorages/com.wails.Prism",
     "~/Library/Saved Application State/com.wails.Prism.savedState",
