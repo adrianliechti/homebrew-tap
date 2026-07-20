@@ -1,6 +1,6 @@
 cask "wingman-app" do
-  version "0.11.6"
-  sha256 "a7b532d3105e29353aa93a74e78038aa7ba96c0a20f3dbae91a34f68c8804548"
+  version "0.11.7"
+  sha256 "22a63ad90cb39ec3b98ac0017e3254171bcc3fbc0ba0899e166f0c16a4584829"
 
   url "https://github.com/adrianliechti/wingman-agent/releases/download/v#{version}/wingman-app_#{version}_macOS_arm64.zip"
   name "Wingman Agent"
