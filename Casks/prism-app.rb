@@ -1,6 +1,6 @@
 cask "prism-app" do
-  version "0.1.2"
-  sha256 "a93d21acb490da2df6ad3c7a3d5cb5c590fd9d8a0eb0bdefb329f0e583341e5b"
+  version "0.1.3"
+  sha256 "d2bd53fce15f7ea096b1c3ed43e33463c3c047b7a9e921c54bbbfaf760f03283"
 
   url "https://github.com/adrianliechti/prism/releases/download/v#{version}/prism-app_#{version}_macOS_arm64.zip"
   name "Prism"
