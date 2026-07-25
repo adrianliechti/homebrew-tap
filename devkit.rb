@@ -5,22 +5,22 @@
 class Devkit < Formula
   desc ""
   homepage ""
-  version "0.4.0"
+  version "0.4.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/devkit/releases/download/v0.4.0/devkit_0.4.0_darwin_amd64.tar.gz"
-      sha256 "a512671a54d9763febd7a832116386fa2fac608796817658ebc8ca650aa217d9"
+      url "https://github.com/adrianliechti/devkit/releases/download/v0.4.1/devkit_0.4.1_darwin_amd64.tar.gz"
+      sha256 "1fecf04cd01d25b95cd4938c50b29034b27cec829803a3e421ae3deccf0c628d"
 
-      def install
+      define_method(:install) do
         bin.install "devkit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/devkit/releases/download/v0.4.0/devkit_0.4.0_darwin_arm64.tar.gz"
-      sha256 "07b38b50a6827a83d20e46343a5464b8d9441719aacf49ff3f01337b345caec7"
+      url "https://github.com/adrianliechti/devkit/releases/download/v0.4.1/devkit_0.4.1_darwin_arm64.tar.gz"
+      sha256 "b7dfebbe8aa8d2bb71eb2bca72d49331f1e309406ee02726753d3770b8565467"
 
-      def install
+      define_method(:install) do
         bin.install "devkit"
       end
     end
@@ -28,16 +28,16 @@ class Devkit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/devkit/releases/download/v0.4.0/devkit_0.4.0_linux_amd64.tar.gz"
-      sha256 "6d701bb9b2dabe4304db21969ac8adb315ff9801ca41fba6427cfcf99dede9fa"
-      def install
+      url "https://github.com/adrianliechti/devkit/releases/download/v0.4.1/devkit_0.4.1_linux_amd64.tar.gz"
+      sha256 "950081885f564d57b1b6b46cd67e2f5bc52197a909467f7901abeda87f971537"
+      define_method(:install) do
         bin.install "devkit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/devkit/releases/download/v0.4.0/devkit_0.4.0_linux_arm64.tar.gz"
-      sha256 "7036620405112e6d73aac04b8714b80c7ded1c2c308c0bfdb073cd192d932fe8"
-      def install
+      url "https://github.com/adrianliechti/devkit/releases/download/v0.4.1/devkit_0.4.1_linux_arm64.tar.gz"
+      sha256 "fe193928f3746053832f841060ecdc66de20579d52f99726b69b41e2124376be"
+      define_method(:install) do
         bin.install "devkit"
       end
     end
