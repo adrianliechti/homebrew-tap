@@ -5,20 +5,20 @@
 class Devkube < Formula
   desc ""
   homepage ""
-  version "0.30.4"
+  version "0.30.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.30.4/devkube_0.30.4_darwin_amd64.tar.gz"
-      sha256 "17e01a809a10bb63cd425a261c910c2135d64b050b5e88202301a43cb1422627"
+      url "https://github.com/adrianliechti/devkube/releases/download/v0.30.5/devkube_0.30.5_darwin_amd64.tar.gz"
+      sha256 "4fb9c3770521decf5e22d1adf5e54840e1b08527e3b09518def115360e624cb0"
 
       define_method(:install) do
         bin.install "devkube"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.30.4/devkube_0.30.4_darwin_arm64.tar.gz"
-      sha256 "5ece440eb277c12b5f952a1c46165ce2637b22b63f822c2b68a7e4b9b58e9e2f"
+      url "https://github.com/adrianliechti/devkube/releases/download/v0.30.5/devkube_0.30.5_darwin_arm64.tar.gz"
+      sha256 "c6816bbc53fc9d27d6ccac8ce46f07eae77cd0c7ecc80a8b5aeab74eecf63f74"
 
       define_method(:install) do
         bin.install "devkube"
@@ -28,15 +28,15 @@ class Devkube < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.30.4/devkube_0.30.4_linux_amd64.tar.gz"
-      sha256 "17ab55463ab077ad379735614497c5787144322ee61313391a120a504ea4b713"
+      url "https://github.com/adrianliechti/devkube/releases/download/v0.30.5/devkube_0.30.5_linux_amd64.tar.gz"
+      sha256 "307a425a6800eaad0728c4bf28ed4ee36c0e4531daf5a6f4976fd8d7e2d88074"
       define_method(:install) do
         bin.install "devkube"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/devkube/releases/download/v0.30.4/devkube_0.30.4_linux_arm64.tar.gz"
-      sha256 "f98294b41e51303bbf2d66f5030fa7cefe4864c123f78a305aba72d4b96f5d34"
+      url "https://github.com/adrianliechti/devkube/releases/download/v0.30.5/devkube_0.30.5_linux_arm64.tar.gz"
+      sha256 "9a9a06e073af6b29d7347ad49c41db82066249dc131fde76fd90a1d548c82fe6"
       define_method(:install) do
         bin.install "devkube"
       end
