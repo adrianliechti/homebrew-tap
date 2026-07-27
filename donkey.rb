@@ -5,20 +5,20 @@
 class Donkey < Formula
   desc ""
   homepage ""
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/adrianliechti/donkey/releases/download/v0.3.0/donkey_darwin_amd64.tar.gz"
-      sha256 "065162ab804d9ed4139dd9103877dfd1ecb650c8853f1a10429c404c006b3eaa"
+      url "https://github.com/adrianliechti/donkey/releases/download/v0.3.1/donkey_darwin_amd64.tar.gz"
+      sha256 "616112781a5eeca089fcd7b00ad1c5bb18ef99591b633068dbd479be2a08281c"
 
       define_method(:install) do
         bin.install "donkey"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/adrianliechti/donkey/releases/download/v0.3.0/donkey_darwin_arm64.tar.gz"
-      sha256 "746f566bfb83b8b8da067830c6eae97a02e208f95c0e8327819c9e1be1077c12"
+      url "https://github.com/adrianliechti/donkey/releases/download/v0.3.1/donkey_darwin_arm64.tar.gz"
+      sha256 "ca2b81570f5ebc743585e49a030643b4cf801316debe83f189cb4866563260b3"
 
       define_method(:install) do
         bin.install "donkey"
@@ -28,15 +28,15 @@ class Donkey < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/donkey/releases/download/v0.3.0/donkey_linux_amd64.tar.gz"
-      sha256 "156527508279fdbd69f4b6885a108c85aa33f9d2a36ebb989f68e2f644b8eb66"
+      url "https://github.com/adrianliechti/donkey/releases/download/v0.3.1/donkey_linux_amd64.tar.gz"
+      sha256 "d902ae0e020b513b4093533a127cbf4aa3f55931196c2dfd4683121f235ddaf1"
       define_method(:install) do
         bin.install "donkey"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/adrianliechti/donkey/releases/download/v0.3.0/donkey_linux_arm64.tar.gz"
-      sha256 "aa1ec5456fd7ddd57aac51f91a0c5acce2c3d74d7b25ef59eee38494f2421b40"
+      url "https://github.com/adrianliechti/donkey/releases/download/v0.3.1/donkey_linux_arm64.tar.gz"
+      sha256 "38306f4e986321a8d9c0474c3040dfacb385972446d80bd751912c3096379ac8"
       define_method(:install) do
         bin.install "donkey"
       end
