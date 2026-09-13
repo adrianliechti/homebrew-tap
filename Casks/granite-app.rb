@@ -13,26 +13,27 @@ cask "granite-app" do
   end
 
   depends_on arch: :arm64
+  depends_on macos: :monterey
 
   app "Granite.app"
 
   # The app is not code-signed / notarized, so macOS quarantines the download
   # and refuses to open it. Strip the quarantine attribute on install.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Granite.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "{{appdir}}/Granite.app"]
   end
 
   uninstall quit: ["com.adrianliechti.granite", "com.wails.Granite"]
 
   zap trash: [
     "~/Library/Caches/com.adrianliechti.granite",
-    "~/Library/HTTPStorages/com.adrianliechti.granite",
-    "~/Library/Saved Application State/com.adrianliechti.granite.savedState",
-    "~/Library/WebKit/com.adrianliechti.granite",
     "~/Library/Caches/com.wails.Granite",
+    "~/Library/HTTPStorages/com.adrianliechti.granite",
     "~/Library/HTTPStorages/com.wails.Granite",
+    "~/Library/Saved Application State/com.adrianliechti.granite.savedState",
     "~/Library/Saved Application State/com.wails.Granite.savedState",
+    "~/Library/WebKit/com.adrianliechti.granite",
     "~/Library/WebKit/com.wails.Granite",
   ]
 end

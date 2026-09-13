@@ -13,26 +13,27 @@ cask "bridge-app" do
   end
 
   depends_on arch: :arm64
+  depends_on macos: :monterey
 
   app "Bridge.app"
 
   # The app is not code-signed / notarized, so macOS quarantines the download
   # and refuses to open it. Strip the quarantine attribute on install.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Bridge.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "{{appdir}}/Bridge.app"]
   end
 
   uninstall quit: ["com.adrianliechti.bridge", "com.wails.Bridge"]
 
   zap trash: [
     "~/Library/Caches/com.adrianliechti.bridge",
-    "~/Library/HTTPStorages/com.adrianliechti.bridge",
-    "~/Library/Saved Application State/com.adrianliechti.bridge.savedState",
-    "~/Library/WebKit/com.adrianliechti.bridge",
     "~/Library/Caches/com.wails.Bridge",
+    "~/Library/HTTPStorages/com.adrianliechti.bridge",
     "~/Library/HTTPStorages/com.wails.Bridge",
+    "~/Library/Saved Application State/com.adrianliechti.bridge.savedState",
     "~/Library/Saved Application State/com.wails.Bridge.savedState",
+    "~/Library/WebKit/com.adrianliechti.bridge",
     "~/Library/WebKit/com.wails.Bridge",
   ]
 end

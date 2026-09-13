@@ -1,3 +1,8 @@
 {
+  "devkit": "adrianliechti/tap/devkit",
+  "devkube": "adrianliechti/tap/devkube",
+  "donkey": "adrianliechti/tap/donkey",
+  "loop": "adrianliechti/tap/loop",
+  "tunnel": "adrianliechti/tap/tunnel",
   "wingman-agent": "adrianliechti/tap/wingman-cli"
 }

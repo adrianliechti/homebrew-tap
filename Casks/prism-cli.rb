@@ -3,24 +3,23 @@ cask "prism-cli" do
   version "0.1.4"
 
   on_macos do
-    on_intel do
-      sha256 "ac326a235ea09e0d411ffe993383b3bf90de1d7460f0dbeeb8068e4e56baee84"
-      url "https://github.com/adrianliechti/prism/releases/download/v#{version}/prism_#{version}_darwin_amd64.tar.gz"
-    end
     on_arm do
       sha256 "59d027fcaf77a044a672c31003dbb3f1405a90368ad89bca950f25f73f51eb34"
       url "https://github.com/adrianliechti/prism/releases/download/v#{version}/prism_#{version}_darwin_arm64.tar.gz"
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "d1d260281d668e0296a268326aa57012bdf3a6c7d72f1f5ab07742124c940d34"
-      url "https://github.com/adrianliechti/prism/releases/download/v#{version}/prism_#{version}_linux_amd64.tar.gz"
+      sha256 "ac326a235ea09e0d411ffe993383b3bf90de1d7460f0dbeeb8068e4e56baee84"
+      url "https://github.com/adrianliechti/prism/releases/download/v#{version}/prism_#{version}_darwin_amd64.tar.gz"
     end
+  end
+  on_linux do
     on_arm do
       sha256 "1f34143470a1c953c205799e88cf1534e4ff4d40a7f4db9cb539b09702ff8b96"
       url "https://github.com/adrianliechti/prism/releases/download/v#{version}/prism_#{version}_linux_arm64.tar.gz"
+    end
+    on_intel do
+      sha256 "d1d260281d668e0296a268326aa57012bdf3a6c7d72f1f5ab07742124c940d34"
+      url "https://github.com/adrianliechti/prism/releases/download/v#{version}/prism_#{version}_linux_amd64.tar.gz"
     end
   end
 
@@ -34,12 +33,11 @@ cask "prism-cli" do
 
   binary "prism"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/prism"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/prism"]
     end
   end
 
   # No zap stanza required
-
 end
