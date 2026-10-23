@@ -1,6 +1,6 @@
 cask "bridge-app" do
-  version "0.3.1"
-  sha256 "62bb28266ce5ec50788fff0ec2b92d2d8e22cb9962d88c5f50078d744d32c52d"
+  version "0.3.2"
+  sha256 "2260a397a9a3a00e9a1f0dfdf42194639c3e2013ef09a1f3c405462b26adfbec"
 
   url "https://github.com/adrianliechti/bridge/releases/download/v#{version}/bridge-app_#{version}_macOS_arm64.zip"
   name "Bridge"
