@@ -1,6 +1,6 @@
 cask "granite-app" do
-  version "0.1.3"
-  sha256 "1e413a5e4b41311495f61ba4c003e04cb1245d205c5aae361474bbd5b6d810bb"
+  version "0.1.4"
+  sha256 "63fb82997d45d636d8090ff3cb8865ea3e81cec0fd87e1137e723184e79a6f63"
 
   url "https://github.com/adrianliechti/granite/releases/download/v#{version}/granite-app_#{version}_macOS_arm64.zip"
   name "Granite"
