@@ -4,21 +4,21 @@ cask "wingman-cli" do
 
   on_macos do
     on_arm do
-      sha256 "c2bb8e0b24711c8494bf37326a5faf8facb9cb76137ec64b532c3e03c0e76d1b"
+      sha256 "ce82eae4e7a305d06924d230a3452038dee6c643e6ddda11f3ae9665a3c78e12"
       url "https://github.com/adrianliechti/wingman-agent/releases/download/v#{version}/wingman-agent_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "619b0db267e8e668a0770b6c70aab8b624b99d415d482d480b2dcefe5ace37ab"
+      sha256 "11ffd47d80385d490a0790abb954fa695e4d6d0e600703ed53861155edb7966a"
       url "https://github.com/adrianliechti/wingman-agent/releases/download/v#{version}/wingman-agent_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "19704c0f48af7d3913c1dc9e05dfdcbea950232dfd7ebe31f6e3d16471746544"
+      sha256 "dff1bcf4ebab78b5b64f1713834f435a039c29fe523bd3cd851554db717ad94c"
       url "https://github.com/adrianliechti/wingman-agent/releases/download/v#{version}/wingman-agent_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "e3194d5fdeaa9c815f38242295e0460d98d52202ce5e1edb3863c1df0503ed16"
+      sha256 "ab4bd2b2d18505d02f11f37c09a3f5df5a05a8d6fff028bef987832b40236de4"
       url "https://github.com/adrianliechti/wingman-agent/releases/download/v#{version}/wingman-agent_#{version}_linux_amd64.tar.gz"
     end
   end
